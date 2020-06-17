@@ -2,15 +2,17 @@
     display: flex;
 	align-items: center;
 	justify-content: center;
-	position: fixed;
+	position:fixed;
+	overflow: auto;
 	top: 0;
-	min-height: 100vh;
+	left: 0;
+	height: 100vh;
 	width: 100%;
-	background-color: black;
-//	background-color:rgba(0,0,0,.1);
-    animation-duration: .4s;
+	z-index: 1;
+	background-color:rgba(0,0,0,.1);
+	animation-duration: .6s;
 	animation-name: modal;
-	z-index: 2;
+
 }
 
 @keyframes modal {
@@ -45,10 +47,4 @@
 	cursor: pointer;
 	color:white;
    }
-}
-
-.containerModal{
-    display: flex;
-    flex-direction:column;
-    margin:0 auto;
 }

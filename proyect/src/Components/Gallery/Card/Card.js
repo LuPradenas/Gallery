@@ -29,7 +29,7 @@ class Card extends React.Component  {
                 src={imagedata.url} alt="pugs" 
                 />
             <div className={style.studyOverlay}>
-  	          <h2 className={style.studyTitle}>Pug Model</h2>
+  	          <h2 className={style.studyTitle}>model pug</h2>
                {this.state.show && <Modal Cerrar={this.CerrarTexto} isHome />}
                   <Boton Abrir={this.IsOpen} />
                 </div>
