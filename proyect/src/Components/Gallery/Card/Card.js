@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './style.module.scss';
 import Modal from '../Modal/Modal';
+import Boton from '../Modal/Boton/botton';
 
 class Card extends React.Component  {
   state = {
@@ -11,6 +12,8 @@ class Card extends React.Component  {
     this.setState({ show: true });
   };
 
+
+  // esta funcion es llamado desde el componente Texto mediante prop, con el boton llama a la funcion y convierte al state en falso y deja de renderizar
   CerrarTexto = () => {
     this.setState({ show: false });
   };
@@ -18,7 +21,6 @@ class Card extends React.Component  {
     const { image } = this.props;
     return  (
       <>
-      {this.state.show && <Modal Cerrar={this.CerrarTexto} isHome />}
         <div className={style.cardContainer}>
           {image.map((imagedata) => (
             <div key={imagedata.id} className={style.cardList}>
@@ -27,9 +29,10 @@ class Card extends React.Component  {
                 src={imagedata.url} alt="pugs" 
                 />
             <div className={style.studyOverlay}>
-  	    <h2 className={style.studyTitle}>Developing Hexxis</h2>
-       <span className={style.studyLink} href="#"   Abrir={this.IsOpen} >View Case Study</span>
-  </div>
+  	          <h2 className={style.studyTitle}>Pug Model</h2>
+               {this.state.show && <Modal Cerrar={this.CerrarTexto} isHome />}
+                  <Boton Abrir={this.IsOpen} />
+                </div>
             </div>
           ))}
   </div> 

@@ -5,9 +5,9 @@ import style from './style.module.scss';
 function Boton({ onClick }) {
   return (
     <div>
-    <button type="button" onClick={onClick} className={style.btn}>
+    <span type="button" onClick={onClick} className={style.btn}>
      X
-    </button>
+    </span>
     </div>
   );
 }

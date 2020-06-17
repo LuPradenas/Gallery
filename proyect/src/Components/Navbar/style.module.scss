@@ -2,7 +2,7 @@
 
 .container{
     background:#afb0b4;
-    width:100%;
+    width:100vmax;
     height: 15%;
     position:absolute;
 
@@ -13,4 +13,12 @@
     color:white;
     padding: 10px;
     font-size: 1.55rem;
+  }
+
+
+  @media only screen and (max-width:500px) {
+       .container{
+        width:100vh;
+        height: 15%;
+       }
   }
