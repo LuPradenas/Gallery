@@ -1,22 +1,15 @@
-import React from 'react';
-import style from './style.module.scss';
-import Boton from './Cerrar';
+import React from "react";
+import Image from '../Imagen/imagen';
+import styles from './styles.module.scss';
 
-class Modal extends React.Component {
+const Modal = ({ isOpen, onClick, src }) => {
+  if (isOpen === false) return null;
 
-  cerrar = () => this.props.Cerrar();
-  
-  render() {
-    const { seleccion } = this.props;
-    console.log(seleccion);
-    return (
-      <div className={style.modal}>
-        <Boton onClick={this.cerrar} className={style.BotonClose} />
-        <div isHome={this.props.isHome} className={style.containerModal}>         
-           </div>
+  return (
+    <div className={styles.modal}  onClick={onClick}>
+        <Image src={src} />
       </div>
-    );
-  }
-}
+  );
+};
 
 export default Modal;

@@ -1,25 +1,25 @@
-.contenedorExpandida {
-	display: flex;
-	flex-direction: column;
+.modal{
+    display: flex;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
+	position:fixed;
+	overflow: auto;
 	top: 0;
-	min-height: 100vh;
-	min-width: 100vw;
-	background-color: rgba(0, 0, 0, 0.685);
-	animation-duration: .7s;
-	animation-name: expansion;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	background-color:rgba(0,0,0,.8);
+	animation-duration: .6s;
+    animation-name: modal;
 }
-
-@keyframes expansion {
-	from {
-		opacity: 0;
-		transform: scale(0);
-	}
-
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
+@keyframes modal {
+    from {
+	opacity: 0;
+	transform: scale(0);
+}
+    to {
+	opacity: 1;
+	transform: scale(1);
+   }
 }
